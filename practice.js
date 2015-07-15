@@ -5,7 +5,9 @@
 
   //Code here
 
+var me = {name:"Alex", age:"29"}
 
+alert(me.name);
 
 
 //NEXT PROBLEM
@@ -16,16 +18,27 @@
 //Make a 'favoriteThings' object that contains the following keys: band, food, person, book, movie, holiday. Have the values to those keys be your favorite thing in that category.
 
   //Code here
+  var favoriteThings { 
+    band = "No Doubt",
+    food = "all",
+    person = "Maureen", 
+    book = "The Man Who Planted Trees",
+    movie = "The Nightmare Before Christmas",
+    holiday= "Halloween"
+  }
 
 
 //After you've made your object, add another key named 'car' with the value being your favorite car and then another key named 'brand' with the value being your favorite brand.
 
   //Code here
-
+favoriteThings.car = "Bicycle";
+favoriteThings.brand = "none";
 
 //Now change the food key in your favoriteThings object to be 'Lettuce' and change the book key in your favoriteThings object to be '50 Shades of Gray'.
 
   //Code here
+favoriteThings.food = "lettuce";
+favoriteThings.book = "50 Shades of Gray";
 
 
 
@@ -44,9 +57,13 @@ that is named color, with the value being the color of your backpack. */
 
   //Code here
 
-//After you do the above, alert your entire backPack object.
+var backPack = {}
 
-  //Code here
+var item = "firstPocket";
+backPack[item] = "chapstick";
+backPack.color = "black";
+
+ console.log(backPack); //Code here
 
 /*You probably noticed that it just alerted [object Object].
 Alerting to see the data in your Object doesn't work so well.
