@@ -4,6 +4,12 @@
 //Create an object called me. Give it a key of name with the value being your name, and another key of age with the value being your age. Then alert your name using dot notation.
 
   //Code here
+  var me = {
+    name: "Alex Larson",
+    age: "29"
+  }
+
+  alert(me['name']);
 
 var me = {name:"Alex", age:"29"}
 
@@ -18,7 +24,20 @@ alert(me.name);
 //Make a 'favoriteThings' object that contains the following keys: band, food, person, book, movie, holiday. Have the values to those keys be your favorite thing in that category.
 
   //Code here
-  var favoriteThings { 
+
+var favoriteThings = {
+  band:"No Doubt",
+  food:"Breakfast",
+  person:"Grandma Beck",
+  book:"The Man Who Planted Trees",
+  movie:"Easy A",
+  holiday:"Halloween"
+}
+
+
+
+
+  var favoriteThings = { 
     band = "No Doubt",
     food = "all",
     person = "Maureen", 
@@ -31,6 +50,9 @@ alert(me.name);
 //After you've made your object, add another key named 'car' with the value being your favorite car and then another key named 'brand' with the value being your favorite brand.
 
   //Code here
+favoriteThings.car = "none";
+favoriteThings.brand = "Trader Joe's";
+
 favoriteThings.car = "Bicycle";
 favoriteThings.brand = "none";
 
@@ -56,6 +78,20 @@ Using dot notation, add another key (or property) to your backPack object
 that is named color, with the value being the color of your backpack. */
 
   //Code here
+var backPack = {}
+var item = 'firstPocket';
+
+backPack['item'] = 'chapstick';
+backPack.color = 'black';
+
+
+
+
+
+
+
+
+
 
 var backPack = {}
 
@@ -63,14 +99,14 @@ var item = "firstPocket";
 backPack[item] = "chapstick";
 backPack.color = "black";
 
- console.log(backPack); //Code here
+ //Code here
 
 /*You probably noticed that it just alerted [object Object].
 Alerting to see the data in your Object doesn't work so well.
 Instead, console.log your whole backPack object and then check out the console. */
 
   //Code here
-
+ console.log(backPack);
 
 
 
@@ -83,11 +119,23 @@ Instead, console.log your whole backPack object and then check out the console. 
 
   //Code Here
 
+  var me = {
+    name: "Alex",
+    age: "30",
+    height: "5'8",
+    gender: "male",
+    married: "no",
+    eyeColor: "brown",
+    hairColor: "brown",
+  }
+
 //Now, loop through your object and alert every value. *Tyler --> 24 --> 6'0 --> Male, etc etc
 
   //Code Here
 
-
+for(var key in obj) {
+  alert(me);
+}
 
 
 //NEXT PROBLEM
@@ -189,13 +237,20 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
  which logs 'hello' to the console. */
 
   //Code Here
-
+var methodCollection = [];
 //Now call your alertHello and logHello methods.
 
   //Code Here
+methodCollection alertHello = function() {
+  alert("hello";)
+}
 
+methodCollection logHello = function() {
+  console.log("hello";)
+}
 
-
+methodCollection.alertHello();
+methodCollection.logHello();
 //NEXT PROBLEM
 
 
@@ -203,7 +258,13 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 // Create a function called MakePerson which takes in name, birthday, ssn as its parameters and returns a new object with all of the information that you passed in.
 
   //Code Here
-
+var MakePerson = function(a, b, c) {
+  return {
+    name: a,
+    birthday: b,
+    ssn: c
+  }
+}
 
 
 //NEXT PROBLEM
@@ -213,7 +274,13 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 // Create a function called MakeCard which takes in all the data it needs to make a Credit Card object and returns that object so that whenever you invoke MakeCard, you get a brand new credit card.
 
   //Code Here
-  
+  var makeCard = function(num, exp, ccv) {
+    return {
+      cardNumber: num,
+      expirationData: exp,
+      securityCode: ccv
+    }
+  }
   
   
 //NEXT PROBLEM
@@ -226,5 +293,14 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 */
 
   //Code Here
-
+var bindCard = function(personObj, cardObj){
+  var mergedObj = {};
+  for(item in personObj) {
+    mergedObj[item] = personObj[item]
+  }
+  for(var item in cardObj) {
+    mergedObj[item] = cardObj[item];
+  }
+  return mergedObj;
+}
 
