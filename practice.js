@@ -130,10 +130,14 @@ Instead, console.log your whole backPack object and then check out the console. 
   }
 
 //Now, loop through your object and alert every value. *Tyler --> 24 --> 6'0 --> Male, etc etc
-
+function alertMe(me){
+  for(key in me){
+    alert(me);
+  }
+}
   //Code Here
 
-for(var key in obj) {
+for(value in obj) {
   alert(me);
 }
 
@@ -144,12 +148,21 @@ for(var key in obj) {
 
 
 //Create an Object called 'album' with 5 keys named different song titles that you make up, with the values being the length of each song.
-
+ var album = {
+    "The Longest Song": "0:01";
+    "The Shortest Song": "23:39";
+    "My Favorite Song": null;
+    "I Wish I Had A Kitten": "15:32";
+    "L": "0:15"
+ }
   //Code Here
 
 //Now, loop through your album object alerting every song title individually.
 
   //Code Here
+  for(key in album){
+    alert(key);
+  }
 
 
 
@@ -162,12 +175,23 @@ for(var key in obj) {
 //Create an object called states that has 5 US states as properties with the values being their population (doesn't have to be accurate).
 
   //Code Here
+  var states = {
+    "Hawaii": "1222111";
+    "Utah": "999";
+    "California": "5456241";
+    "Alabam": "3";
+    "North Dakota": "1234123234"
+  }
 
 //Now, loop through your states object and if the states population is greater than 30K, alert that state.
 
   //Code Here
 
-
+for(value in states){
+  if(value <= 30000){
+    alert(key);
+  }
+}
 
 
 //NEXT PROBLEM
